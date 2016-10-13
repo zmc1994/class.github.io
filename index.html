@@ -23,10 +23,13 @@
         $(function ()
         {
             var deg = -40 , i = 1;
-            $("#container").click(function ()
-            {
-                transform($(this)[0], "rotateY(" + (deg * i++) + "deg)")
-            });
+            var timer = setInterval(function(){
+                transform($("#container")[0], "rotateY(" + (deg * i++) + "deg)");
+            },1500);
+            // $("#container").click(function ()
+            // {
+            //     transform($(this)[0], "rotateY(" + (deg * i++) + "deg)")
+            // });
         });
 
 
