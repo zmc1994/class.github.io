@@ -26,6 +26,14 @@
             var timer = setInterval(function(){
                 transform($("#container")[0], "rotateY(" + (deg * i++) + "deg)");
             },1500);
+            $('#container').mouseover(function(){
+                clearInterval(timer);
+            })
+            $('#container').mouseout(function(){
+                timer = setInterval(function(){
+                transform($("#container")[0], "rotateY(" + (deg * i++) + "deg)");
+            },1500);
+            })
             // $("#container").click(function ()
             // {
             //     transform($(this)[0], "rotateY(" + (deg * i++) + "deg)")
